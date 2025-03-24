@@ -1,0 +1,53 @@
+.head, .nav, .main, .sidebar, .advertis,.advertise, .footer{
+    background-color: bisque;
+    border: 2px solid tomato;
+    padding: 5px;
+    border-radius: 5px;
+}
+.head{
+grid-area: head;
+}
+.nav{
+    grid-area: nav;
+
+}
+.advertis{
+    grid-area: advertis;
+}
+.main{
+    grid-area: main;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.advertise{
+    grid-area: advertise;
+}
+.footer{
+    grid-area: footer;
+}
+
+.container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "head head head"
+    "nav  main sidebar"
+    "nav  main advertise"
+    "footer footer footer "
+    ;
+}
+
+
+@media  screen and (max-width:576px) {
+.container{
+    grid-template-areas: 
+    "head"
+    "nav"
+    "main"
+    "sidebar"
+    "advertise"
+    "footer"
+    ;
+}    
+}
